@@ -79,7 +79,17 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   }
 
   // Fetch related posts (same category, published, exclude current)
-  let relatedPosts = [];
+  let relatedPosts: {
+    id: string;
+    slug: string;
+    title: string;
+    excerpt: string | null;
+    featured_image_url: string | null;
+    published_at: string | null;
+    content: string | null;
+    categories: { name: string } | null;
+  }[] = [];
+
   try {
     const { data } = await supabase
       .from("blogs")
@@ -88,7 +98,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       .eq("category_id", blog.category_id)
       .neq("id", blog.id)
       .limit(3);
-    if (data) relatedPosts = data;
+    if (data) relatedPosts = data as unknown as typeof relatedPosts;
   } catch (err) {}
 
   // Schema.org JSON-LD

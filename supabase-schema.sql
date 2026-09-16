@@ -1,5 +1,6 @@
 -- Supabase Schema for Blog CMS
 
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 -- 1. Create Categories Table
 CREATE TABLE categories (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
@@ -19,7 +20,7 @@ CREATE TABLE blogs (
   featured_image_alt TEXT,
   category_id UUID REFERENCES categories(id) ON DELETE SET NULL,
   tags TEXT[] DEFAULT '{}',
-  author TEXT DEFAULT 'Work Sector Builders',
+  author TEXT DEFAULT 'Yasoda Builders',
   status TEXT DEFAULT 'draft' CHECK (status IN ('draft', 'published')),
   published_at TIMESTAMPTZ,
   

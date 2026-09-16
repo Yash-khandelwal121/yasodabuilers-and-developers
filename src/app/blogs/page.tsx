@@ -20,7 +20,17 @@ export default async function BlogsPage() {
   const supabase = await createClient();
 
   // Fetch only published blogs, ordered by newest first
-  let blogs = [];
+  let blogs: {
+    id: string;
+    slug: string;
+    title: string;
+    excerpt: string | null;
+    content: string | null;
+    featured_image_url: string | null;
+    published_at: string | null;
+    categories: { name: string } | null;
+  }[] = [];
+
   try {
     const { data, error } = await supabase
       .from("blogs")
@@ -29,7 +39,7 @@ export default async function BlogsPage() {
       .order("published_at", { ascending: false });
       
     if (!error && data) {
-      blogs = data;
+      blogs = data as unknown as typeof blogs;
     }
   } catch (err) {
     console.warn("Failed to fetch blogs. Supabase might not be configured.");

@@ -138,7 +138,8 @@ export const blogs = [
     category: "Real Estate",
     date: "Sep 12, 2026",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=800",
-    slug: "/blogs/premium-apartment-guide"
+    slug: "/blogs/premium-apartment-guide",
+    excerpt: "Discover the essential features and amenities that define a truly premium residential apartment in today's real estate market."
   },
   {
     id: 2,
@@ -146,7 +147,8 @@ export const blogs = [
     category: "Architecture",
     date: "Aug 28, 2026",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800",
-    slug: "/blogs/vastu-modern-architecture"
+    slug: "/blogs/vastu-modern-architecture",
+    excerpt: "Learn how ancient Vastu Shastra principles can be seamlessly integrated into modern architectural designs for better living spaces."
   },
   {
     id: 3,
@@ -154,6 +156,7 @@ export const blogs = [
     category: "Property Investment",
     date: "Aug 15, 2026",
     image: "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80&w=800",
-    slug: "/blogs/investment-trends-ap"
+    slug: "/blogs/investment-trends-ap",
+    excerpt: "An in-depth analysis of the current real estate investment opportunities and future growth corridors across Andhra Pradesh."
   },
 ];

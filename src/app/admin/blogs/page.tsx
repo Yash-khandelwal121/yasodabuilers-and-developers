@@ -10,10 +10,21 @@ export default async function AdminBlogsPage() {
   const supabase = await createClient()
 
   // Fetch all blogs with categories
-  const { data: blogs } = await supabase
+  const { data: rawBlogs } = await supabase
     .from('blogs')
     .select('id, title, slug, status, published_at, updated_at, featured_image_url, categories(name)')
     .order('created_at', { ascending: false })
+
+  const blogs = rawBlogs as unknown as {
+    id: string;
+    title: string;
+    slug: string;
+    status: string;
+    published_at: string | null;
+    updated_at: string;
+    featured_image_url: string | null;
+    categories: { name: string } | null;
+  }[];
 
   // Fetch categories for filtering
   const { data: categories } = await supabase

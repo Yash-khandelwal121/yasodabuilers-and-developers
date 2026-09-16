@@ -17,11 +17,19 @@ export default async function AdminDashboard() {
   const { count: totalCategories } = await supabase.from('categories').select('*', { count: 'exact', head: true })
 
   // Fetch recent blogs
-  const { data: recentBlogs } = await supabase
+  const { data: rawRecentBlogs } = await supabase
     .from('blogs')
     .select('id, title, status, updated_at, categories(name)')
     .order('updated_at', { ascending: false })
     .limit(5)
+
+  const recentBlogs = rawRecentBlogs as unknown as {
+    id: string;
+    title: string;
+    status: string;
+    updated_at: string;
+    categories: { name: string } | null;
+  }[];
 
   const stats = [
     { name: 'Total Blogs', value: totalBlogs || 0, icon: FileText, color: 'text-blue-600', bg: 'bg-blue-50' },
