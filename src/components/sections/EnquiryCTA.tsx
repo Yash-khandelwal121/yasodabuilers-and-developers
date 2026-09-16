@@ -6,7 +6,7 @@ import { PhoneCall, ArrowRight } from "lucide-react";
 
 export default function EnquiryCTA() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden flex items-center justify-center">
+    <section className="relative py-16 lg:py-20 overflow-hidden flex items-center justify-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div 
