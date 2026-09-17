@@ -10,74 +10,14 @@ import { whyChooseUs } from "@/data/placeholder-data";
 export default function AboutPage() {
   return (
     <>
-      <div className="pt-28 md:pt-32 pb-16 md:pb-0 bg-stone-50 relative overflow-hidden flex items-center lg:h-[560px] min-h-[480px]">
-        <div className="container-custom h-full flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-8">
-          
-          {/* Left Text Content */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center z-10">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex items-center space-x-3 mb-5"
-            >
-              <div className="h-[2px] w-8 bg-sage-500" />
-              <span className="text-xs font-semibold tracking-widest text-sage-500 uppercase">
-                About Yasoda Builders
-              </span>
-            </motion.div>
-
-            <motion.h1 
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-[38px] md:text-[44px] lg:text-[58px] font-serif font-bold text-charcoal-900 leading-[1.1] mb-6"
-            >
-              Building Trust.<br />
-              Creating Lasting Spaces.
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-[17px] md:text-[18px] text-gray-700 leading-relaxed max-w-[480px] font-sans mb-8"
-            >
-              Yasoda Builders and Developers is focused on creating thoughtfully planned residential and commercial spaces with quality construction, reliable execution and long-term value.
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <Link
-                href="/projects"
-                className="group inline-flex items-center justify-center px-8 h-[54px] bg-forest-800 text-white font-medium tracking-wide transition-all duration-300 hover:bg-forest-900"
-              >
-                EXPLORE OUR PROJECTS
-                <ArrowRight size={18} className="ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </motion.div>
-          </div>
-
-          {/* Right Image */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-1/2 h-[350px] lg:h-[560px] lg:absolute lg:right-0 lg:top-0"
-          >
-            <div className="w-full h-full relative">
-              <img 
-                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200" 
-                alt="Modern Residential Apartment"
-                className="w-full h-full object-cover rounded-[2px] lg:rounded-none lg:rounded-bl-[4px]"
-              />
-            </div>
-          </motion.div>
-          
-        </div>
+      <div className="pt-20 md:pt-24 w-full bg-stone-50">
+        <Link href="/projects" className="block w-full cursor-pointer transition-opacity hover:opacity-95">
+          <img 
+            src="/images/about%20us.png" 
+            alt="About Yasoda Builders" 
+            className="w-full h-auto object-cover"
+          />
+        </Link>
       </div>
 
       {/* Our Story */}
