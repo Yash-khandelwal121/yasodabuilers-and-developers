@@ -34,29 +34,12 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="pt-32 pb-20 bg-charcoal-900 text-white relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/80 to-transparent" />
-        </div>
-        
-        <div className="container-custom relative z-10 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-serif font-bold mb-6"
-          >
-            Contact Us
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-beige-100/80 max-w-2xl mx-auto"
-          >
-            Get in touch with our team to discuss your next construction or real estate project.
-          </motion.p>
-        </div>
+      <div className="w-full">
+        <img 
+          src="/images/contact.png" 
+          alt="Contact Us" 
+          className="w-full h-auto object-cover"
+        />
       </div>
 
       <section className="py-24 bg-background">

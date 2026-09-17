@@ -26,28 +26,13 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <div className="pt-32 pb-20 bg-charcoal-900 text-white relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/80 to-transparent" />
-        </div>
-        
-        <div className="container-custom relative z-10 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-serif font-bold mb-6"
-          >
-            Our Projects
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-beige-100/80 max-w-2xl mx-auto"
-          >
-            Explore our portfolio of premium residential and commercial developments.
-          </motion.p>
+      <div className="pt-20 md:pt-24 pb-16 px-4 md:px-8 w-full bg-stone-50">
+        <div className="relative overflow-hidden rounded-md border border-gray-200 shadow-xl max-w-[1400px] mx-auto flex">
+          <img 
+            src="/images/yasoda-projects-hero.jpg" 
+            alt="Our Projects" 
+            className="w-full h-auto object-cover"
+          />
         </div>
       </div>
 

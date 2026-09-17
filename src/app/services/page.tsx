@@ -2,35 +2,20 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Home, Building2, Wrench, PencilRuler } from "lucide-react";
 import { services } from "@/data/placeholder-data";
 import EnquiryCTA from "@/components/sections/EnquiryCTA";
 
 export default function ServicesDirectoryPage() {
   return (
     <>
-      <div className="pt-32 pb-20 bg-charcoal-900 text-white relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888081622-15cb382740fa?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/80 to-transparent" />
-        </div>
-        
-        <div className="container-custom relative z-10 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-serif font-bold mb-6"
-          >
-            Our Services
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-beige-100/80 max-w-2xl mx-auto"
-          >
-            Comprehensive construction and development solutions tailored to your specific needs.
-          </motion.p>
+      <div className="pt-20 md:pt-24 pb-16 px-4 md:px-8 w-full bg-stone-50">
+        <div className="relative overflow-hidden rounded-md border border-gray-200 shadow-xl max-w-[1400px] mx-auto flex">
+          <img 
+            src="/images/service.png" 
+            alt="Our Services" 
+            className="w-full h-auto object-cover"
+          />
         </div>
       </div>
 
